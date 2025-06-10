@@ -1,0 +1,92 @@
+/* src/styles/components/hero.css */
+
+.hero {
+  position: relative;
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2rem 8vw;
+  z-index: 1;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 0;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  text-align: left;
+}
+
+.hero__title {
+  font-size: 3.2rem;
+  line-height: 1.3;
+  color: var(--color-texto);
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.hero__button {
+  background-color: var(--color-acento);
+  color: var(--color-link);
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.hero__button:hover {
+  background-color: var(--color-btn-hover);
+}
+
+/* Imagen móvil (oculta por defecto) */
+.hero__bg--mobile {
+  display: none;
+}
+
+/* 📱 Responsive: centrado + imagen 2 */
+@media (max-width: 768px) {
+  .hero {
+    justify-content: center;
+    padding: 2rem;
+    background-image: none; /* quita imagen de escritorio */
+  }
+
+  .hero__bg--mobile {
+    display: block;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .hero__content {
+    text-align: center;
+    max-width: 90%;
+  }
+
+  .hero__title {
+    font-size: 2rem;
+  }
+
+  .hero__button {
+    font-size: 0.95rem;
+    padding: 0.8rem 2rem;
+  }
+}
