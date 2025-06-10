@@ -4,7 +4,7 @@ import { StrictMode } from 'react';
 
 
 import App from './App.jsx';
-
+//main.jsx
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
