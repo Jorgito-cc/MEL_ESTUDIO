@@ -11,7 +11,9 @@ import { PortafolioPAge } from "../presentation/pages/PortafolioPAge";
 import { ServiciosPage } from "../presentation/pages/ServiciosPage";
 import { OpinionesPage } from "../presentation/pages/OpinionesPage";
 import { About } from "../presentation/pages/AboutPage";
-import { ContactoPage } from "../presentation/pages/contactoPage";
+import { ContactoPage } from "../presentation/pages/ContactoPage";
+
+
 
 export const MainRoutes = () => {
   return (
