@@ -1,0 +1,69 @@
+.reservar {
+  background: #fdf9f4;
+  padding: 4rem 2rem;
+  max-width: 650px;
+  margin: 5rem auto;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.reservar__titulo {
+  text-align: center;
+  font-size: 2.3rem;
+  color: #3e2c23;
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+}
+
+.reservar__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.reservar__grupo {
+  display: flex;
+  flex-direction: column;
+}
+
+.reservar__grupo label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #5e493d;
+  font-size: 0.95rem;
+}
+
+.reservar__grupo input,
+.reservar__grupo select,
+.reservar__grupo textarea {
+  padding: 0.9rem 1rem;
+  border-radius: 0.6rem;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border 0.3s;
+  background-color: #fffaf6;
+}
+
+.reservar__grupo input:focus,
+.reservar__grupo select:focus,
+.reservar__grupo textarea:focus {
+  outline: none;
+  border: 1px solid #b08968;
+  box-shadow: 0 0 0 2px rgba(176, 137, 104, 0.2);
+}
+
+.reservar__btn {
+  background-color: #b08968;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.6rem;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.reservar__btn:hover {
+  background-color: #a07658;
+}

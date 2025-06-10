@@ -1,11 +1,12 @@
+// PaqueteCard.jsx
 import { useNavigate } from 'react-router-dom';
 import '../../styles/shared/paquete-card.css';
 
-export const PaqueteCard = ({ titulo, beneficios, nivel }) => {
+export const PaqueteCard = ({ titulo, beneficios, nivel, precio }) => {
   const navigate = useNavigate();
 
   const handleReserva = () => {
-    navigate(`/reservar?paquete=${nivel.toLowerCase()}`);
+    navigate(`/servicio?paquete=${nivel.toLowerCase()}`);
   };
 
   return (
@@ -16,6 +17,9 @@ export const PaqueteCard = ({ titulo, beneficios, nivel }) => {
           <li key={index} className="paquete__item">{item}</li>
         ))}
       </ul>
+
+      <p className="paquete__precio">{precio}</p> {/* nuevo bloque */}
+
       <button className="paquete__btn" onClick={handleReserva}>Reservar</button>
     </div>
   );

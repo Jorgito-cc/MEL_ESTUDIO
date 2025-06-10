@@ -1,9 +1,10 @@
 .portafolio {
-  padding: 4rem 2rem;
+  padding: 8rem 2rem 8rem 2rem; /* Más espacio arriba y abajo */
   background-color: var(--color-bg);
   max-width: 1200px;
   margin: auto;
 }
+
 
 .portafolio__titulo {
   font-size: 2rem;
@@ -41,4 +42,32 @@
   padding: 1rem;
   font-weight: 500;
   color: var(--color-texto);
+}
+
+
+
+
+
+.portafolio__tabs {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.portafolio__tabs button {
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  color: #333;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.portafolio__tabs button.active {
+  border-bottom: 2px solid #b08968;
+  color: #b08968;
 }

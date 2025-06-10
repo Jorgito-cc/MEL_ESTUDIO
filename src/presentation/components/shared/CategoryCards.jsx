@@ -8,25 +8,32 @@ export const CategoryCards = () => {
   const navigate = useNavigate();
 
   const handleClick = (categoria) => {
+      console.log('Navegando a categoría:', categoria);
     navigate(`/portafolio?categoria=${categoria}`);
   };
 
   return (
     <>
+     
     <section className="categorias">
-      <div className="categorias__card" onClick={() => handleClick('turismo')}>
-        <img src={turismoImg} alt="Turismo" className="categorias__img" />
-        <h3 className="categorias__titulo">Turismo</h3>
-      </div>
-      <div className="categorias__card" onClick={() => handleClick('eventos')}>
-        <img src={eventosImg} alt="Eventos" className="categorias__img" />
-        <h3 className="categorias__titulo">Eventos</h3>
-      </div>
-      <div className="categorias__card" onClick={() => handleClick('producto')}>
-        <img src={productoImg} alt="Producto" className="categorias__img" />
-        <h3 className="categorias__titulo">Producto</h3>
-      </div>
-    </section>
+  <h1 className="categorias__titulo">Servicios</h1>
+
+  <div className="categorias__grid">
+    <div className="categorias__card" onClick={() => handleClick('turismo')}>
+      <img src={turismoImg} alt="Turismo" className="categorias__img" />
+      <h3 className="categorias__subtitulo">Turismo</h3>
+    </div>
+    <div className="categorias__card" onClick={() => handleClick('eventos')}>
+      <img src={eventosImg} alt="Eventos" className="categorias__img" />
+      <h3 className="categorias__subtitulo">Eventos</h3>
+    </div>
+    <div className="categorias__card" onClick={() => handleClick('productos')}>
+      <img src={productoImg} alt="productos" className="categorias__img" />
+      <h3 className="categorias__subtitulo">Productos</h3>
+    </div>
+  </div>
+</section>
+
     </>
   );
 };

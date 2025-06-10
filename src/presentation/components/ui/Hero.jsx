@@ -2,11 +2,16 @@ import React from "react";
 import '../../styles/components/hero.css'
 import imagen from '../../../assets/imagen2.jpg';
 import imagen2 from '../../../assets/imagent2.jpg';
-
+import { useNavigate } from 'react-router-dom';
 export const Hero = () => {
+  const navigate = useNavigate(); // ✅ Hook para navegar
+
+  const irAPortafolio = () => {
+    navigate('/portafolio?categoria=turismo'); // Por ejemplo, ya con categoría por defecto
+  };
+
   return (
-    <>
-  <section
+    <section
       className="hero"
       style={{ backgroundImage: `url(${imagen})` }}
     >
@@ -14,17 +19,15 @@ export const Hero = () => {
         <h1 className="hero__title">
           Captura tu historia con <br /> estilo y profesionalismo
         </h1>
-        <a href="#portafolio" className="hero__button">
+        <button className="hero__button" onClick={irAPortafolio}>
           Ver portafolio
-        </a>
+        </button>
       </div>
 
-      {/* capa responsive (background swap solo en CSS) */}
       <div
         className="hero__bg--mobile"
         style={{ backgroundImage: `url(${imagen2})` }}
       ></div>
     </section>
-    </>
   );
 };
