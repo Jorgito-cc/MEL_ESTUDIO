@@ -1,6 +1,6 @@
 import './App.css'
 
-import { MainRoutes } from './routes/MainRoutes.'
+import { MainRoutes } from './routes/MainRoutes.jsx'
 
 function App() {
 
