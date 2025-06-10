@@ -1,8 +1,8 @@
 import { useNavigate } from 'react-router-dom';
-import '../styles/components/category-cards.css';
-import turismoImg from '../../assets/imagent2.jpg';
-import eventosImg from '../../assets/evento.jpg';
-import productoImg from '../../assets/producto.jpg';
+import '../../styles/components/category-cards.css';
+import turismoImg from '../../../assets/imagent2.jpg';
+import eventosImg from '../../../assets/evento.jpg';
+import productoImg from '../../../assets/producto.jpg';
 
 export const CategoryCards = () => {
   const navigate = useNavigate();

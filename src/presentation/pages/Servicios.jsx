@@ -1,5 +1,5 @@
-import { PaqueteCard } from '../../components/shared/PaqueteCard';
-import '../../styles/page/servicios.css';
+import { PaqueteCard } from '../components/shared/PaqueteCard';
+import '../styles/page/servicios.css';
 
 export const Servicios = () => {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
-import '../styles/components/hero.css'
-import imagen from '../../assets/imagen2.jpg';
-import imagen2 from '../../assets/imagent2.jpg';
+import '../../styles/components/hero.css'
+import imagen from '../../../assets/imagen2.jpg';
+import imagen2 from '../../../assets/imagent2.jpg';
 
 export const Hero = () => {
   return (

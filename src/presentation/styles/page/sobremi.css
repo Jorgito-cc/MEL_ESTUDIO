@@ -1,6 +1,5 @@
-/* src/styles/components/sobre-mi.css */
 .sobre-mi {
-  background-color: #F6F4F3;
+  background-color: #fff; /* Fondo general blanco */
   padding: 4rem 2rem;
 }
 
@@ -16,13 +15,14 @@
   flex-direction: column;
   gap: 2rem;
   align-items: center;
+  justify-content: center;
 }
 
 .sobre-mi__frase {
-  background-color: #fff;
+  background-color: #F6F4F3; /* SOLO el fondo del texto */
   padding: 2rem;
   border-radius: 1rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
   max-width: 500px;
   text-align: center;
   font-style: italic;
@@ -41,16 +41,25 @@
   height: auto;
   border-radius: 1rem;
   object-fit: cover;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 @media screen and (min-width: 768px) {
   .sobre-mi__contenido {
     flex-direction: row;
-    justify-content: center;
   }
 
   .sobre-mi__frase, .sobre-mi__imagen {
     flex: 1;
     max-width: 400px;
+  }
+
+  .sobre-mi__frase {
+    text-align: left;
+    padding: 2.5rem;
+  }
+
+  .sobre-mi__autor {
+    text-align: right;
   }
 }

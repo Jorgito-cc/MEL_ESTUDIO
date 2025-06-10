@@ -1,6 +1,6 @@
 import React from 'react';
-import '../../styles/page/sobremi.css';
-import imagen2 from '../../../assets/imagen2.jpg';
+import '../styles/page/sobremi.css';
+import imagen2 from '../../assets/imagen2.jpg';
 
 export const SobreMi = () => {
   return (

@@ -48,6 +48,10 @@
   color: var(--color-link);
   cursor: pointer;
 }
+.navbar__home-link {
+  text-decoration: none;
+  color: inherit;
+}
 
 /* RESPONSIVE */
 @media screen and (max-width: 768px) {
