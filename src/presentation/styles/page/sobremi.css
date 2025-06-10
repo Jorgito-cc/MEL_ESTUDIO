@@ -1,0 +1,56 @@
+/* src/styles/components/sobre-mi.css */
+.sobre-mi {
+  background-color: #F6F4F3;
+  padding: 4rem 2rem;
+}
+
+.sobre-mi__titulo {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.sobre-mi__contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.sobre-mi__frase {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  max-width: 500px;
+  text-align: center;
+  font-style: italic;
+}
+
+.sobre-mi__autor {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.sobre-mi__imagen img {
+  width: 280px;
+  height: auto;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 768px) {
+  .sobre-mi__contenido {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .sobre-mi__frase, .sobre-mi__imagen {
+    flex: 1;
+    max-width: 400px;
+  }
+}

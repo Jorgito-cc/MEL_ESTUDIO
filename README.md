@@ -35,5 +35,5 @@ Presenta un catálogo visual impactante y permite a los clientes agendar sesione
   Encargado de la implementación de la interfaz, lógica de reservas, responsive design y estructura de componentes siguiendo BEM.
 ## 🌐 Demo en vivo
 
-🔗 [Ver demo online](https://mel-studio.netlify.app)  
+🔗 [Ver demo online]()  
 
