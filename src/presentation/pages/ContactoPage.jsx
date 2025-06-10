@@ -10,9 +10,17 @@ export const ContactoPage = () => {
         <div className="contacto__info">
           <img src={melisaImg} alt="Melissa Uria" className="contacto__img" />
           <div className="contacto__datos">
-            <p><FaPhoneAlt /> +34 612 343 678</p>
-            <p><FaEnvelope /> contacto@fotografia.com</p>
-            <p><FaMapMarkerAlt /> Calle Falsa 122, Sona Cruz.</p>
+            <p>
+              <FaPhoneAlt />{' '}
+              <a href="tel:+59175098807">+591 75098807</a>
+            </p>
+            <p>
+              <FaEnvelope />{' '}
+              <a href="mailto:Melissauria1@gmail.com">Melissauria1@gmail.com</a>
+            </p>
+            <p>
+              <FaMapMarkerAlt /> Avenida 3 Pasos al Frente, Santa Cruz de la Sierra.
+            </p>
           </div>
         </div>
 

@@ -10,13 +10,13 @@ import persona6 from '../../assets/persona6.jpg';
 import persona7 from '../../assets/persona7.jpg';
 
 const opinionesMock = [
-  { nombre: 'Camila Soto', descripcion: 'Una experiencia maravillosa.', imagen: persona1 },
+  { nombre: 'Marcos Soto', descripcion: 'Una experiencia maravillosa.', imagen: persona1 },
   { nombre: 'José Ramírez', descripcion: 'Quedamos encantados con el resultado.', imagen: persona2 },
   { nombre: 'Lucía Fernández', descripcion: 'Muy amable y creativa.', imagen: persona3 },
   { nombre: 'Diego Morales', descripcion: 'Gran atención al detalle.', imagen: persona4 },
-  { nombre: 'María López', descripcion: 'Superó mis expectativas.', imagen: persona5 },
+  { nombre: 'Marío López', descripcion: 'Superó mis expectativas.', imagen: persona5 },
   { nombre: 'Fernando Paredes', descripcion: 'Excelente resultado.', imagen: persona6 },
-  { nombre: 'Ana Claudia', descripcion: '¡Todo salió hermoso!', imagen: persona7 },
+  { nombre: 'Robert Navarro', descripcion: '¡Todo salió hermoso!', imagen: persona7 },
 ];
 
 export const OpinionesPage = () => {

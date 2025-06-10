@@ -18,7 +18,7 @@ export const About = () => {
             Apasionada por capturar momentos auténticos con una mirada creativa, cercana y profesional.
             A través de mi lente, busco que cada imagen cuente una historia que inspire y conecte con quienes la observan.
           </p>
-          <p className="about__firma">©2025 - melissauria.com</p>
+          <p className="about__firma">©2025 -  Melissauria1@gmail.com</p>
         </div>
       </div>
     </section>
