@@ -1,7 +1,7 @@
-import React from 'react';
-import '../styles/page/contacto.css';
-import melisaImg from '../../assets/melisa.jpeg';
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import React from "react";
+import "../styles/page/contacto.css";
+import melisaImg from "../../assets/melisa.jpeg";
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 export const ContactoPage = () => {
   return (
@@ -11,15 +11,24 @@ export const ContactoPage = () => {
           <img src={melisaImg} alt="Melissa Uria" className="contacto__img" />
           <div className="contacto__datos">
             <p>
-              <FaPhoneAlt />{' '}
-              <a href="tel:+59175098807">+591 75098807</a>
+              <FaPhoneAlt />{" "}
+              <a href="tel:+59175098807" className="contacto__link">
+                +591 75098807
+              </a>
             </p>
             <p>
-              <FaEnvelope />{' '}
-              <a href="mailto:Melissauria1@gmail.com">Melissauria1@gmail.com</a>
+              <FaEnvelope />{" "}
+              <a
+                href="mailto:Melissauria1@gmail.com"
+                className="contacto__link"
+              >
+                Melissauria1@gmail.com
+              </a>
             </p>
+
             <p>
-              <FaMapMarkerAlt /> Avenida 3 Pasos al Frente, Santa Cruz de la Sierra.
+              <FaMapMarkerAlt /> Avenida 3 Pasos al Frente, Santa Cruz de la
+              Sierra.
             </p>
           </div>
         </div>
@@ -27,8 +36,10 @@ export const ContactoPage = () => {
         <div className="contacto__formulario">
           <h1 className="contacto__titulo">Contáctame</h1>
           <p className="contacto__subtitulo">
-            Planeemos juntos tu sesión fotográfica perfecta.<br />
-            Completa este formulario y me pondré en contacto contigo lo antes posible.
+            Planeemos juntos tu sesión fotográfica perfecta.
+            <br />
+            Completa este formulario y me pondré en contacto contigo lo antes
+            posible.
           </p>
           <form>
             <input type="text" placeholder="Nombre" required />
