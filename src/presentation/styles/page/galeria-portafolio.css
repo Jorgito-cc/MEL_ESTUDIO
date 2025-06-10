@@ -1,0 +1,32 @@
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.galeria__item {
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.galeria__item:hover {
+  transform: translateY(-5px);
+}
+
+.galeria__img {
+  width: 100%;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  height: 200px;
+  object-fit: cover;
+}
+
+.galeria__titulo {
+  padding: 0.5rem;
+  font-weight: 600;
+}
