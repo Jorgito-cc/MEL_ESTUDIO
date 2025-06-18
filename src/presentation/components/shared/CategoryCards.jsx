@@ -16,7 +16,7 @@ export const CategoryCards = () => {
     <>
      
     <section className="categorias">
-  <h1 className="categorias__titulo">Servicios</h1>
+  <h1 className="categorias__titulo">Portafolio</h1>
 
   <div className="categorias__grid">
     <div className="categorias__card" onClick={() => handleClick('turismo')}>

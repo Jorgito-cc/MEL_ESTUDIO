@@ -11,13 +11,12 @@ export const About = () => {
         <img src={melisaImg} alt="Melissa Uria" className="about__image" />
 
         <div className="about__text">
-          <p>
-            Soy <strong>Melissa Uria</strong>, estudiante de Diseño Gráfico <span>👌</span>. 
-          </p>
-          <p>
-            Apasionada por capturar momentos auténticos con una mirada creativa, cercana y profesional.
-            A través de mi lente, busco que cada imagen cuente una historia que inspire y conecte con quienes la observan.
-          </p>
+               <p>
+  MEL STUDIO permite brindar información clara sobre los servicios ofrecidos,<br/>
+  facilitar el contacto con potenciales clientes y posicionarse en el mercado como una marca confiable y profesional.<br/>
+  Esta herramienta digital no solo optimiza la comunicación,<br/>
+  sino que también impulsa el crecimiento del emprendimiento fotográfico al ampliar su alcance más allá de las redes sociales.
+</p>
           <p className="about__firma">©2025 -  Melissauria1@gmail.com</p>
         </div>
       </div>

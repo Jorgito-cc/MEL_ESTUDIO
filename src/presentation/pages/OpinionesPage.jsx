@@ -15,7 +15,7 @@ const opinionesMock = [
   { nombre: 'Lucía Fernández', descripcion: 'Muy amable y creativa.', imagen: persona3 },
   { nombre: 'Diego Morales', descripcion: 'Gran atención al detalle.', imagen: persona4 },
   { nombre: 'Marío López', descripcion: 'Superó mis expectativas.', imagen: persona5 },
-  { nombre: 'Fernando Paredes', descripcion: 'Excelente resultado.', imagen: persona6 },
+  { nombre: 'Fernanda Paredes', descripcion: 'Excelente resultado.', imagen: persona6 },
   { nombre: 'Robert Navarro', descripcion: '¡Todo salió hermoso!', imagen: persona7 },
 ];
 

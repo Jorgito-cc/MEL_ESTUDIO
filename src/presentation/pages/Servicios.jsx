@@ -10,7 +10,7 @@ export const Servicios = () => {
         <PaqueteCard
   titulo="Básico"
   nivel="Basico"
-  precio="💰 100 Bs."
+  precio="💰 400 Bs."
   beneficios={[
     '1 locación exterior',
     '10 fotografías editadas',
@@ -22,7 +22,7 @@ export const Servicios = () => {
 <PaqueteCard
   titulo="Estándar"
   nivel="Estandar"
-  precio="💰 180 Bs."
+  precio="💰 1000 Bs."
   beneficios={[
     '2 locaciones',
     '20 fotografías + 1 reel',
@@ -34,7 +34,7 @@ export const Servicios = () => {
 <PaqueteCard
   titulo="Premium"
   nivel="Premium"
-  precio="💰 350 Bs."
+  precio="💰 1500 Bs."
   beneficios={[
     'Locación a elección',
     '40 fotografías + video corto',
