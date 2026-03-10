@@ -21,27 +21,60 @@
 
 .portafolio__item {
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-smooth);
+  border: 1px solid rgba(222, 208, 182, 0.2);
+  position: relative;
+}
+
+.portafolio__item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-acento);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .portafolio__item:hover {
-  transform: scale(1.02);
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: var(--shadow-lg);
+}
+
+.portafolio__item:hover::after {
+  opacity: 0.06;
 }
 
 .portafolio__img {
   width: 100%;
   height: 200px;
   object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), filter 0.3s ease;
+}
+
+.portafolio__item:hover .portafolio__img {
+  transform: scale(1.1) rotate(1deg);
+  filter: brightness(0.92);
 }
 
 .portafolio__caption {
   text-align: center;
-  padding: 1rem;
-  font-weight: 500;
+  padding: 1.2rem;
+  font-weight: 600;
   color: var(--color-texto);
+  background: linear-gradient(135deg, rgba(245, 245, 245, 0.7) 0%, rgba(255, 255, 255, 0.9) 100%);
+  position: relative;
+  z-index: 2;
+  transition: var(--transition-fast);
+}
+
+.portafolio__item:hover .portafolio__caption {
+  color: var(--color-btn-hover);
+  background: linear-gradient(135deg, rgba(222, 208, 182, 0.1) 0%, rgba(194, 180, 158, 0.1) 100%);
 }
 
 
@@ -58,13 +91,34 @@
 .portafolio__tabs button {
   background-color: transparent;
   border: none;
-  font-weight: bold;
+  font-weight: 600;
   font-size: 1rem;
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1.2rem;
   cursor: pointer;
   color: #333;
   border-bottom: 2px solid transparent;
-  transition: all 0.3s ease;
+  transition: var(--transition-fast);
+  position: relative;
+  text-transform: capitalize;
+}
+
+.portafolio__tabs button::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gradient-acento);
+  transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portafolio__tabs button:hover {
+  color: var(--color-btn-hover);
+}
+
+.portafolio__tabs button:hover::before {
+  width: 100%;
 }
 
 .portafolio__tabs button.active {

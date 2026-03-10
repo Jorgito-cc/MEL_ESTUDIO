@@ -17,11 +17,23 @@
 .footer__icon {
   font-size: 1.5rem;
   color: var(--color-texto);
-  transition: color 0.3s;
+  transition: var(--transition-smooth);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  background: transparent;
+  border: 2px solid transparent;
 }
 
 .footer__icon:hover {
   color: var(--color-btn-hover);
+  background: rgba(222, 208, 182, 0.1);
+  border-color: var(--color-btn-hover);
+  transform: scale(1.15) rotate(5deg);
 }
 
 .footer__text {

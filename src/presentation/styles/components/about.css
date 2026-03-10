@@ -4,10 +4,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--color-bg);
+  background: linear-gradient(135deg, var(--color-bg) 0%, rgba(249, 245, 242, 0.8) 100%);
   padding: 4rem 2rem;
   gap: 2rem;
   flex-wrap: wrap;
+  border-radius: 20px;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-smooth);
+  animation: fadeIn 0.8s ease;
+}
+
+.about:hover {
+  box-shadow: var(--shadow-lg);
 }
 
 .about__text {
@@ -20,6 +28,14 @@
   font-size: 1.3rem;
   font-style: italic;
   margin-bottom: 1rem;
+  color: var(--color-btn-hover);
+  transition: var(--transition-fast);
+  padding-left: 1rem;
+  border-left: 3px solid var(--color-acento);
+}
+
+.about:hover .about__quote {
+  transform: translateX(10px);
 }
 
 .about__author {
@@ -38,6 +54,17 @@
 .about__image img {
   width: 100%;
   max-width: 300px;
-  border-radius: 0.5rem;
+  border-radius: 16px;
   object-fit: cover;
+  box-shadow: var(--shadow-lg);
+  transition: var(--transition-smooth);
+  border: 3px solid transparent;
+  background-image: linear-gradient(#fff, #fff), var(--gradient-acento);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.about__image img:hover {
+  transform: scale(1.08) rotate(3deg);
+  box-shadow: var(--shadow-xl);
 }

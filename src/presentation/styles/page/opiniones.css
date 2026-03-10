@@ -10,8 +10,13 @@
 
 .opiniones__header h1 {
   font-size: 2.3rem;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 0.5rem;
+  background: var(--gradient-acento);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 1px;
 }
 
 .opiniones__header p {
@@ -20,18 +25,39 @@
 }
 
 .opiniones__header button {
-  background-color: #B08968;
+  background: var(--gradient-acento);
   color: white;
-  padding: 0.75rem 1.5rem;
+  padding: 0.9rem 1.8rem;
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 10px;
   cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+  font-weight: 700;
+  transition: var(--transition-smooth);
+  box-shadow: var(--shadow-md);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.opiniones__header button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: left 0.4s ease;
+}
+
+.opiniones__header button:hover::before {
+  left: 100%;
 }
 
 .opiniones__header button:hover {
-  background-color: #a3775d;
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
 }
 
 .opiniones__cards {
@@ -43,33 +69,71 @@
 .opinion-card {
   background-color: #fffefc;
   padding: 1.5rem;
-  border-radius: 1rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.07);
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
   text-align: center;
-  transition: transform 0.3s;
+  transition: var(--transition-smooth);
+  border: 1px solid rgba(222, 208, 182, 0.2);
+  position: relative;
+}
+
+.opinion-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-acento);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  border-radius: 16px;
+  z-index: 0;
 }
 
 .opinion-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: var(--shadow-lg);
+}
+
+.opinion-card:hover::before {
+  opacity: 0.04;
 }
 
 .opinion-card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  border-radius: 0.8rem;
+  border-radius: 12px;
   margin-bottom: 1rem;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), filter 0.3s ease;
+  border: 2px solid rgba(222, 208, 182, 0.2);
+  position: relative;
+  z-index: 1;
+}
+
+.opinion-card:hover img {
+  transform: scale(1.08);
+  filter: brightness(0.95);
 }
 
 .opinion-card h3 {
   font-size: 1.1rem;
-  font-weight: bold;
+  font-weight: 700;
   margin-bottom: 0.5rem;
+  color: var(--color-btn-hover);
+  position: relative;
+  z-index: 1;
+  transition: var(--transition-fast);
+}
+
+.opinion-card:hover h3 {
+  transform: translateY(-2px);
 }
 
 .opinion-card p {
   font-size: 0.95rem;
-  color: #555;
+  color: #666;
+  position: relative;
+  z-index: 1;
+  line-height: 1.6;
 }
 
 /* Modal */
