@@ -8,7 +8,7 @@ Plataforma web profesional de gestión visual, portafolio y reservas para servic
 
 | Característica | Descripción |
 |---|---|
-| Web App (Landing + Portafolio) | Presentación estética de servicios fotográficos clasificados por categorías visuales (Turismo, Eventos, Productos). |
+| Web Ap (Landing + Portafolio) | Presentación estética de servicios fotográficos clasificados por categorías visuales (Turismo, Eventos, Productos). |
 | Sistema de Reservas | Formulario estructurado para agendar sesiones con selección de fecha, hora, tipo de sesión y paquete de servicio, conectado a WhatsApp. |
 | Muro de Opiniones | Sistema de visualización de testimonios y modal interactivo para enviar nuevas valoraciones. |
 | Diseño Responsivo | Interfaz completamente adaptable a dispositivos móviles, tablets y pantallas de escritorio. |
@@ -21,20 +21,20 @@ El proyecto está organizado siguiendo el patrón arquitectónico modular basado
 
 ```text
 src/
-├── assets/                  # Recursos estáticos (imágenes y fotografías optimizadas)
-├── common/                  # Componentes y elementos compartidos y reutilizables
-│   ├── components/          # Modal genérico, ScrollToTop, etc.
-│   └── layout/              # Navbar (con drawer móvil), Footer y MainLayout
-├── features/                # Módulos organizados por funcionalidad del negocio
-│   ├── about/               # Vista y componentes de 'Sobre mí'
-│   ├── contact/             # Formulario de contacto e información de la marca
-│   ├── home/                # Hero, categorías destacadas y resumen de portada
-│   ├── portfolio/           # Galería fotográfica, pestañas de categorías y modal de detalle
-│   ├── reviews/             # Tarjetas de opiniones y modal para enviar reseñas
-│   └── services/            # Paquetes de precios y formulario de reserva
-├── routes/                  # Enrutador centralizado (AppRoutes y routePaths)
-├── styles/                  # Variables CSS globales, tokens de diseño y estilos base
-└── utils/                   # Utilidades de integración (enlaces de WhatsApp, validaciones)
+├── assets/                  
+├── common/                  
+│   ├── components/          
+│   └── layout/              
+├── features/                
+│   ├── about/               
+│   ├── contact/             
+│   ├── home/                
+│   ├── portfolio/           
+│   ├── reviews/             
+│   └── services/            
+├── routes/                  
+├── styles/                  
+└── utils/                   
 ```
 
 ---

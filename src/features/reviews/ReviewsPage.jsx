@@ -13,7 +13,8 @@ export const ReviewsPage = () => {
       id: Date.now(),
       nombre: newReviewData.nombre,
       descripcion: newReviewData.mensaje,
-      imagen: INITIAL_REVIEWS[0].imagen, // avatar por defecto
+      imagen: INITIAL_REVIEWS[0].imagen, // avatar por defecto estanda 
+
     };
     setReviews([newEntry, ...reviews]);
   };
