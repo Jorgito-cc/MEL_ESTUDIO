@@ -1,0 +1,237 @@
+/* ==================== SERVICIOS / PAQUETES ==================== */
+.services-section {
+  padding: 4.5rem 1.5rem 3rem;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+}
+
+.services-section__title {
+  font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 0.75rem;
+  color: var(--color-logo);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.services-section__subtitle {
+  text-align: center;
+  color: var(--color-texto-muted);
+  max-width: 600px;
+  margin: 0 auto 3.5rem;
+  font-size: 1.05rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 2.5rem;
+  align-items: stretch;
+}
+
+.service-card {
+  background: var(--color-surface);
+  border-radius: 22px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: var(--transition-smooth);
+  border: 1px solid var(--color-border);
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.09);
+  border-color: var(--color-logo);
+}
+
+.service-card--featured {
+  border: 2px solid var(--color-logo);
+  box-shadow: 0 12px 32px rgba(196, 176, 151, 0.18);
+  transform: scale(1.02);
+}
+
+.service-card--featured:hover {
+  transform: scale(1.02) translateY(-8px);
+}
+
+.service-card__badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-logo);
+  color: #FFFFFF;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.35rem 1.1rem;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.service-card__title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: var(--color-texto);
+}
+
+.service-card__price {
+  font-size: 1.95rem;
+  font-weight: 800;
+  color: var(--color-texto);
+  margin: 0.75rem 0 1.5rem;
+}
+
+.service-card__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-bottom: 2.25rem;
+  flex: 1;
+}
+
+.service-card__item {
+  position: relative;
+  padding-left: 1.5rem;
+  color: var(--color-texto);
+  font-size: 0.95rem;
+}
+
+.service-card__item::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-logo);
+  font-weight: bold;
+}
+
+.service-card__btn {
+  background-color: var(--color-btn-bg);
+  color: var(--color-btn-text);
+  font-weight: 700;
+  font-size: 0.88rem;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: var(--transition-fast);
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.service-card__btn:hover {
+  background-color: var(--color-btn-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* ==================== FORMULARIO DE RESERVA ==================== */
+.booking-page {
+  padding: 3rem 1.5rem 6rem;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.booking-page__header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.booking-page__title {
+  font-size: 2.3rem;
+  color: var(--color-logo);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.booking-form {
+  background: var(--color-surface);
+  border-radius: 24px;
+  padding: 3rem 2.75rem;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+}
+
+.booking-form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.booking-form__label {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #554E48;
+}
+
+.booking-form__input,
+.booking-form__select,
+.booking-form__textarea {
+  width: 100%;
+  padding: 0.95rem 1.2rem;
+  border: 1px solid #EAE3D9;
+  border-radius: 10px;
+  background-color: #FAF7F2;
+  color: var(--color-texto);
+  font-size: 0.95rem;
+  transition: var(--transition-fast);
+}
+
+.booking-form__input::placeholder,
+.booking-form__textarea::placeholder {
+  color: #9C8E82;
+}
+
+.booking-form__input:focus,
+.booking-form__select:focus,
+.booking-form__textarea:focus {
+  border-color: var(--color-logo);
+  outline: none;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 0 4px rgba(196, 176, 151, 0.25);
+}
+
+.booking-form__textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.booking-form__actions {
+  margin-top: 0.5rem;
+}
+
+.booking-form__submit {
+  width: 100%;
+  background: var(--color-btn-bg);
+  color: var(--color-btn-text);
+  font-weight: 700;
+  font-size: 0.88rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 1.05rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: var(--transition-fast);
+}
+
+.booking-form__submit:hover {
+  background: var(--color-btn-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 650px) {
+  .booking-form {
+    padding: 2.25rem 1.5rem;
+    border-radius: 20px;
+  }
+}

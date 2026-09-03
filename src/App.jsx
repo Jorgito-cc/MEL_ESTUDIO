@@ -1,14 +1,8 @@
-import './App.css'
-
-import { MainRoutes } from './routes/MainRoutes.jsx'
+import React from 'react';
+import { AppRoutes } from './routes/AppRoutes';
 
 function App() {
-
-  return (
-    <>
-   <MainRoutes/>
-    </>
-  )
+  return <AppRoutes />;
 }
 
-export default App
+export default App;

@@ -1,0 +1,359 @@
+/* ==================== NAVBAR ==================== */
+.app-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 76px;
+  background-color: var(--color-navbar);
+  z-index: 1000;
+  transition: var(--transition-smooth);
+}
+
+.app-navbar--scrolled {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  height: 68px;
+}
+
+.app-navbar__container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 4.5rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.app-navbar__logo {
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: var(--color-logo);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: opacity 0.2s ease;
+}
+
+.app-navbar__logo:hover {
+  opacity: 0.85;
+}
+
+.app-navbar__menu {
+  display: flex;
+  align-items: center;
+}
+
+.app-navbar__drawer-header,
+.app-navbar__drawer-footer {
+  display: none;
+}
+
+.app-navbar__list {
+  display: flex;
+  list-style: none;
+  gap: 2.75rem;
+  align-items: center;
+}
+
+.app-navbar__link {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-nav-link);
+  letter-spacing: 0.4px;
+  position: relative;
+  padding: 0.35rem 0;
+  transition: var(--transition-fast);
+}
+
+.app-navbar__link:hover {
+  color: var(--color-nav-link-hover);
+}
+
+.app-navbar__link.active {
+  color: var(--color-nav-link-active);
+  font-weight: 600;
+}
+
+.app-navbar__link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-logo);
+  transition: var(--transition-fast);
+}
+
+.app-navbar__link:hover::after,
+.app-navbar__link.active::after {
+  width: 100%;
+}
+
+/* Botón Hamburguesa */
+.app-navbar__toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 28px;
+  height: 22px;
+  cursor: pointer;
+  z-index: 1005;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.app-navbar__hamburger {
+  width: 100%;
+  height: 2.5px;
+  background-color: var(--color-logo);
+  border-radius: 2px;
+  transition: var(--transition-fast);
+}
+
+.app-navbar__toggle--active .app-navbar__hamburger:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.app-navbar__toggle--active .app-navbar__hamburger:nth-child(2) {
+  opacity: 0;
+}
+
+.app-navbar__toggle--active .app-navbar__hamburger:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Overlay Oscuro para Drawer Móvil */
+.app-navbar__overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(30, 26, 22, 0.45);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 990;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.app-navbar__overlay--visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ==================== FOOTER ==================== */
+.app-footer {
+  background-color: #FAF7F2;
+  color: var(--color-texto);
+  padding: 3.5rem 1.5rem 2.5rem;
+  text-align: center;
+  border-top: 1px solid rgba(196, 176, 151, 0.15);
+  margin-top: auto;
+}
+
+.app-footer__container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.app-footer__icons {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.app-footer__icon {
+  font-size: 1.3rem;
+  color: var(--color-texto);
+  background: var(--color-surface);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: var(--transition-fast);
+}
+
+.app-footer__icon:hover {
+  background: var(--color-acento);
+  color: var(--color-btn-text);
+  transform: translateY(-3px);
+}
+
+.app-footer__text {
+  font-size: 0.9rem;
+  color: var(--color-texto-muted);
+}
+
+/* ==================== MAIN LAYOUT ==================== */
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-content {
+  flex: 1;
+  padding-top: 76px;
+}
+
+/* Responsive (Mobile Drawer) */
+@media (max-width: 900px) {
+  .app-navbar__container {
+    padding: 0 1.5rem;
+  }
+
+  .app-navbar__toggle {
+    display: flex;
+  }
+
+  .app-navbar__menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 85%;
+    max-width: 320px;
+    height: 100vh;
+    background-color: #FAF7F2;
+    box-shadow: -10px 0 36px rgba(0, 0, 0, 0.16);
+    border-left: 1px solid var(--color-border);
+    flex-direction: column;
+    justify-content: space-between;
+    transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    padding: 1.75rem 1.5rem 2rem;
+    z-index: 1001;
+    overflow-y: auto;
+  }
+
+  .app-navbar__menu--open {
+    right: 0;
+  }
+
+  .app-navbar__drawer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid rgba(196, 176, 151, 0.25);
+    width: 100%;
+  }
+
+  .app-navbar__drawer-brand {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--color-logo);
+    letter-spacing: 3px;
+  }
+
+  .app-navbar__drawer-close {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #EFE7DC;
+    color: var(--color-texto);
+    font-size: 1rem;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition-fast);
+  }
+
+  .app-navbar__drawer-close:hover {
+    background: var(--color-btn-hover);
+    color: var(--color-btn-text);
+    transform: rotate(90deg);
+  }
+
+  .app-navbar__list {
+    flex-direction: column;
+    gap: 0.65rem;
+    width: 100%;
+    margin: 1.5rem 0;
+  }
+
+  .app-navbar__item {
+    width: 100%;
+  }
+
+  .app-navbar__link {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0.95rem 1.2rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #2D2826;
+    border-radius: 12px;
+    transition: var(--transition-fast);
+  }
+
+  .app-navbar__link:hover {
+    background-color: rgba(196, 176, 151, 0.2);
+    color: var(--color-logo);
+    transform: translateX(4px);
+  }
+
+  .app-navbar__link.active {
+    background-color: var(--color-btn-bg);
+    color: var(--color-btn-text);
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(196, 176, 151, 0.25);
+  }
+
+  .app-navbar__link::after {
+    display: none;
+  }
+
+  .app-navbar__drawer-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(196, 176, 151, 0.25);
+    width: 100%;
+  }
+
+  .app-navbar__drawer-socials {
+    display: flex;
+    gap: 1.15rem;
+  }
+
+  .app-navbar__drawer-social-icon {
+    font-size: 1.2rem;
+    color: var(--color-logo);
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(196, 176, 151, 0.2);
+    transition: var(--transition-fast);
+  }
+
+  .app-navbar__drawer-social-icon:hover {
+    background-color: var(--color-logo);
+    color: #FFFFFF;
+    transform: translateY(-2px);
+  }
+
+  .app-navbar__drawer-copy {
+    font-size: 0.78rem;
+    color: var(--color-texto-muted);
+    letter-spacing: 0.5px;
+  }
+}
